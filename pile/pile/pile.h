@@ -71,5 +71,5 @@ void afficherPile(Pile *pile){
         actuel = actuel->suivant;
     }
     printf("\n");
-}
+} 
 #endif /* pile_h */
