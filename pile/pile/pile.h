@@ -19,6 +19,21 @@ struct Pile{
     Element *premier;
 };
 /* Mes fonctions */
+
+Pile *initialiser(){
+    Element *element = malloc(sizeof(element));
+    Pile *pile = malloc(sizeof(pile));
+    
+    if(element == NULL || pile == NULL){
+        exit(EXIT_FAILURE);
+    }
+    element->suivant = NULL;
+    element->nombre = 0;
+    pile->premier = element;
+    
+    return pile;
+}
+
 void empiler(Pile *pile,int nvNombre){
     Element *nouveau = malloc(sizeof(nouveau));
     if(pile == NULL || nouveau == NULL){
